@@ -70,3 +70,6 @@ except ComputeTargetException:
     # Wait for the cluster to complete, show the output log
     cpu_cluster.wait_for_completion(show_output=True)
 
+
+
+#%%

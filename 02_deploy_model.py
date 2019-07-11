@@ -1,4 +1,4 @@
-# import package if neede
+# import package if needed
 #%%
 %matplotlib inline
 import numpy as np
@@ -209,3 +209,5 @@ print("POST to url", service.scoring_uri)
 #print("input data:", input_data)
 print("label:", y_test[random_index])
 print("prediction:", resp.text)
+
+#%%
