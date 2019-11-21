@@ -1,6 +1,6 @@
 # import package if needed
 #%%
-%matplotlib inline
+# %matplotlib inline
 import numpy as np
 import matplotlib
 import matplotlib.pyplot as plt
@@ -127,14 +127,14 @@ with open("myenv.yml","r") as f:
 from azureml.core.webservice import AciWebservice
 
 aciconfig = AciWebservice.deploy_configuration(cpu_cores=1, 
-                                               memory_gb=1, 
+                                               memory_gb=2, 
                                                tags={"data": "MNIST",  "method" : "sklearn"}, 
                                                description='Predict MNIST with sklearn demo01')
 
 # Deploy in Container Instances
 
 #%%
-%%time
+# %%time
 from azureml.core.webservice import Webservice
 from azureml.core.image import ContainerImage
 
@@ -144,7 +144,7 @@ image_config = ContainerImage.image_configuration(execution_script="score.py",
                                                   conda_file="myenv.yml")
 
 service = Webservice.deploy_from_model(workspace=ws,
-                                       name='sklearn-mnist-svc-demo01',
+                                       name='sklearn-mnist-svc-demo02',
                                        deployment_config=aciconfig,
                                        models=[model],
                                        image_config=image_config)

@@ -10,8 +10,6 @@ from azureml.core import Run
 from utils import load_data
 
 
-
-
 # let user feed in 2 parameters, the location of the data files (from datastore), and the regularization rate of the logistic regression model
 parser = argparse.ArgumentParser()
 parser.add_argument('--data-folder', type=str, dest='data_folder', help='data folder mounting point')
@@ -49,3 +47,5 @@ run.log('accuracy', np.float(acc))
 os.makedirs('outputs', exist_ok=True)
 # note file saved in the outputs folder is automatically uploaded into experiment record
 joblib.dump(value=clf, filename='outputs/sklearn_mnist_model.pkl')
+
+# Impoort shutils

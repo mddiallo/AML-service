@@ -8,12 +8,13 @@ print("You are currently using version", azureml.core.VERSION, "of the Azure ML 
 
 # AML workspace info
 #%%
-import infos
+import myinfos
 
-subscription_id = infos.subscription_id
-resource_group = infos.resource_group
-workspace_name = infos.workspace_name
-workspace_region = infos.workspace_region
+
+subscription_id = myinfos.subscription_id
+resource_group = myinfos.resource_group
+workspace_name = myinfos.workspace_name
+workspace_region = myinfos.workspace_region
 
 # Check AML workspace access
 from azureml.core import Workspace

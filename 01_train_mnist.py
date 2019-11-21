@@ -3,7 +3,7 @@
 #%%
 import numpy as np
 import matplotlib.pyplot as plt
-%matplotlib inline
+ # %matplotlib inline
 
 
 import azureml.core
@@ -25,7 +25,7 @@ print(ws.name, ws.location, ws.resource_group, ws.location, sep = '\t')
 # Create an experiment
 
 # You can update the name
-experiment_name = 'sklearn-mnist_demo01'
+experiment_name = 'sklearn-mnist_demo02'
 
 from azureml.core import Experiment
 exp = Experiment(workspace=ws, name=experiment_name)
@@ -212,7 +212,7 @@ run
 
 # Monitor the run
 
-#%%
+ #%%
 from azureml.widgets import RunDetails
 RunDetails(run).show()
 
